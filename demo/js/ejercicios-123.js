@@ -52,16 +52,16 @@
 
 /**EJERCICIO 3 */
 
-var numAp = prompt('numero apertura');
-var numC = prompt("numero cierre");
+// var numAp = prompt('numero apertura');
+// var numC = prompt("numero cierre");
 
-if (numAp > numC || isNaN(numAp) || isNaN(numC)) {
-  console.log("reinicia");
-}
-console.log(numAp +' y '+ numC);
-while (numAp <= numC) {
-  console.log(numAp);
-  numAp++;
-}
+// if (numAp > numC || isNaN(numAp) || isNaN(numC)) {
+//   console.log("reinicia");
+// }
+// console.log(numAp +' y '+ numC);
+// while (numAp <= numC) {
+//   console.log(numAp);
+//   numAp++;
+// }
 
 /**FIN EJERCICIO 3 */
