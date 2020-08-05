@@ -78,3 +78,34 @@ function hola(texto1, callback3) {
 hola('hola pinche putita',function (texto1) {
   document.write(texto1);
 });
+
+
+function llamando(cadena,numero,callback4) {
+  var trozo = cadena + numero;
+  callback4(numero);
+  return trozo;
+}
+
+// llamando('hola putita', 4, function (trozo) {
+//   console.log(trozo);
+// });
+
+// fin practicando los callbacks
+
+//funcion que llama a un arrow function
+llamando("hola putita", 4, trozo => {
+  console.log(trozo);
+});
+
+//Funciones de flecha que son normalmente anonimas y esta es una funcion flecha de una funcion
+var hi = () => "Hello World";
+
+console.log(hi());
+
+
+var flecha = (ubo, dos) => console.log(ubo + dos); 
+
+flecha(2, 3);
+// fin Funciones de flecha 
+
+
