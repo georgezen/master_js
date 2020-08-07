@@ -62,11 +62,15 @@ function ejemplo1_callback(nombre, callback1, callback2) {
   return "Mi nombre es: " + nombre;
 }
 
-ejemplo1_callback("pepe balderas", function (nombre1) {
-  console.log(nombre1);
-},function (datp2) {
-    document.write(datp2);  
-});
+ejemplo1_callback(
+  "pepe balderas",
+  function (nombre1) {
+    console.log(nombre1);
+  },
+  function (datp2) {
+    document.write(datp2 + "<br>");
+  }
+);
 
 function hola(texto1, callback3) {
   var cadena = "esta es una cadena " + texto1;
@@ -75,12 +79,11 @@ function hola(texto1, callback3) {
   callback3(texto1);
 }
 
-hola('hola pinche putita',function (texto1) {
-  document.write(texto1);
+hola("hola pinche putita", function (texto1) {
+  document.write(texto1 + "<br>");
 });
 
-
-function llamando(cadena,numero,callback4) {
+function llamando(cadena, numero, callback4) {
   var trozo = cadena + numero;
   callback4(numero);
   return trozo;
@@ -93,7 +96,7 @@ function llamando(cadena,numero,callback4) {
 // fin practicando los callbacks
 
 //funcion que llama a un arrow function
-llamando("hola putita", 4, trozo => {
+llamando("hola putita", 4, (trozo) => {
   console.log(trozo);
 });
 
@@ -102,10 +105,31 @@ var hi = () => "Hello World";
 
 console.log(hi());
 
-
-var flecha = (ubo, dos) => console.log(ubo + dos); 
+var flecha = (ubo, dos) => console.log(ubo + dos);
 
 flecha(2, 3);
-// fin Funciones de flecha 
 
+function flecha2(apellidos, edad2, callback5, callback6,callback7) {
+  var frase = "tus apellidos son " + apellidos + " y tu edad es " + edad2;
+  callback5(apellidos);
+  callback6(edad2);
+  callback7(frase);
+  return frase;
+}
 
+flecha2(
+  "garcia",
+  43,
+  function (data) {
+    document.write(data+'<br>');
+  },
+  trozo2 => {
+    document.write(trozo2 + "<br>");
+  }, trozo3 => {
+    document.write(trozo3 + "<br>");
+  }
+);
+
+var flecha3 = () => console.log('solo flecha');
+flecha3();
+// fin Funciones de flecha
