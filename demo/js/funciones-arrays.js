@@ -132,4 +132,7 @@ flecha2(
 
 var flecha3 = () => console.log('solo flecha');
 flecha3();
+
+var flecha4 = () => console.log('solo flecha 4');
+flecha4();
 // fin Funciones de flecha
