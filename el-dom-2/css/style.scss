@@ -1,0 +1,52 @@
+@use 'header'; //plantilla para el css del header
+
+*{
+    padding: 0pc;
+    margin: 0pc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .caja{
+        flex-basis: 40%;
+        flex-grow: 1;
+        margin: 10px;
+        border: 1px solid red;
+    }
+
+    .form{
+        
+        width: 40%;
+        min-height: 140px;
+        margin-left: 30%;
+        margin-right:  30%;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .form label{
+        display: block;
+        font-size: 30px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .form input{
+        display: block;
+        width: 80%;
+        height: 30px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        
+    }
+
+    
+}
+
+

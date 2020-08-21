@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    
+    align-items: center;
+    height: 100px;
+    background-color: #eee;
+    box-shadow: 0px 2px 5px #ccc;
+    margin-bottom: 3%;
+
+
+    .titulo{
+        flex-basis: 70%;
+        flex-grow: 1;
+        font-size: 30px;
+        letter-spacing: 1px;
+        text-align: center;
+        
+    }
+}
