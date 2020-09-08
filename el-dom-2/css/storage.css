@@ -1,0 +1,25 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.title,textarea{
+    margin: 20px;
+}
+
+#form{
+    width: 20%;
+    margin: 20px;
+    border:1px solid #000;
+}
+
+#form label,
+#form input{
+    margin: 10px;
+}
+
+#deposito{
+    width: 20%;
+    min-height: 100px;
+    
+}
