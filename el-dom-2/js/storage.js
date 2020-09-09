@@ -27,8 +27,10 @@ if (typeof(Storage) !== 'undefined') {
 var storage = document.querySelector("#storage");
 var buton = document.querySelector("#buton");
 var resaltado = document.querySelector("#deposito");
+var erase = document.querySelector("#erase");
 
-buton.addEventListener('click',() => agregando());
+buton.addEventListener('click', () => agregando());
+erase.addEventListener('click', () => borrado());
 
 var agregando = () => {
     var cadena = storage.value;
@@ -45,7 +47,7 @@ var agregando = () => {
     //depositar objetos en localstorage
     localStorage.setItem("storage", JSON.stringify(objeto2));
     decodificacion();
-    storage.innerHTML = "";
+    
 };
 
 function decodificacion() {
@@ -53,6 +55,12 @@ function decodificacion() {
   var decodificado = JSON.parse(localStorage.getItem("storage"));
   resaltado.innerHTML += decodificado.nombre + "\n";
   
+}
+
+function borrado() {
+    resaltado.innerHTML = "";
+    storage.innerHTML = "";
+    localStorage.removeItem("storage");
 }
 
 
