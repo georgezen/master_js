@@ -3,6 +3,7 @@
 var usuarios = document.querySelector(".usuarios");
 var btn = document.querySelector("#btn");
 var obtener_janet = document.querySelector("#janet");
+var numero1 = document.querySelector('#numero1');
 
 btn.addEventListener("click", () => llamado());
 
@@ -19,6 +20,12 @@ function llamado() {
       .then((data) => data.json())
       .then((janet) => {
         imprime_janet(janet.data);
+
+        return get_profe();
+      })
+      .then(numero => {
+        console.log(numero);
+        imprime_numero(numero);
       });
   }, 2000);
 }
@@ -47,4 +54,26 @@ function imprime_janet(janet) {
   h4.innerHTML = cadena1;
   obtener_janet.append(h4);
   obtener_janet.append(img);
+}
+
+function get_profe() {
+
+
+
+  var numeros = {
+    num1: 90,
+    num2:33
+  };
+
+  return new Promise((resolve, reject) => {
+    if (typeof numeros.num1 != 'number') {
+      return reject("error");
+    }    
+
+    return resolve(numeros.num1);
+  });
+}
+
+function imprime_numero(numero) {
+  numero1.innerHTML = numero;
 }
