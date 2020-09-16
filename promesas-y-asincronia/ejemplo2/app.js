@@ -3,9 +3,11 @@
 var usuarios = document.querySelector(".usuarios");
 var btn = document.querySelector("#btn");
 var obtener_janet = document.querySelector("#janet");
-var numero1 = document.querySelector('#numero1');
+var numero1 = document.querySelector("#numero1");
+var reset = document.querySelector("#reset");
 
 btn.addEventListener("click", () => llamado());
+reset.addEventListener("click", () => reseteando());
 
 function llamado() {
   setTimeout(() => {
@@ -23,7 +25,7 @@ function llamado() {
 
         return get_profe();
       })
-      .then(numero => {
+      .then((numero) => {
         console.log(numero);
         imprime_numero(numero);
       });
@@ -57,18 +59,15 @@ function imprime_janet(janet) {
 }
 
 function get_profe() {
-
-
-
   var numeros = {
     num1: 90,
-    num2:33
+    num2: 33,
   };
 
   return new Promise((resolve, reject) => {
-    if (typeof numeros.num1 != 'number') {
+    if (typeof numeros.num1 != "number") {
       return reject("error");
-    }    
+    }
 
     return resolve(numeros.num1);
   });
@@ -76,4 +75,10 @@ function get_profe() {
 
 function imprime_numero(numero) {
   numero1.innerHTML = numero;
+}
+
+function reseteando() {
+  numero1.innerHTML = "";
+  usuarios.innerHTML = "";
+  obtener_janet.innerHTML = "";
 }
