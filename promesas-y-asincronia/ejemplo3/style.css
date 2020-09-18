@@ -8,7 +8,7 @@
 
 .container{
     display: grid;
-    height: 800px;
+    min-height: 800px;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 15% 65% 20%;
 }
@@ -19,7 +19,8 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid red;
+    background-color: rgba(220, 220, 220,0.4);
+    
 }
 
 .header .logo{
@@ -27,34 +28,43 @@
     flex-grow:1;
     height: 100%;
     
-    border: 1px solid black;
+    
 }
 
 .header .logo img{
     display: block;
-    width: 40%;
-    height: inherit;
-    margin: 0px 30% 0px 30%;
+    width: 30%;
+    height: 80%;
+    margin: 2% 35% 0px 35%;
 }
 
 .menu{
     flex-basis: 51%;
     flex-grow:1;
-    border: 1px solid green;
+ 
 }
+
+
 
 .menu ul{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    
 }
 
 .menu ul li a{
     font-size: 50px;
     color: rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
+    padding: 20px;
+    transition: all 200ms;
     
+}
+
+.menu ul li a:hover{
+    background-color: rgb(4, 122, 59);
+    color: #fff;
+    border-radius: 10px;
 }
 
 .main{
@@ -63,9 +73,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-right: 5%;
-    border: 1px solid blue;
+    margin: 2% 5% 2% 5%;
+    
 }
 
 .section{
@@ -74,7 +83,9 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    border: 1px solid orange;
+    background-color: rgb(242, 242, 242);
+    border-radius: 10px;
+    
 }
 #btn1{
     width: 30%;
@@ -82,7 +93,7 @@
 }
 
 .res-api{
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     width: 50%;
     height: 30%;
     margin-top: 3%;
@@ -91,7 +102,35 @@
 .aside{
     flex-basis: 25%;
     flex-grow: 1;
-    border: 1px solid pink;
+    
+}
+
+.aside #form{
+    width: 80%;
+    height: auto;
+    margin: 10% 10% 0px 10%;
+    border: 1px solid #ccc;
+    text-align: center;
+    
+}
+
+.aside #form label{
+    display: block;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.aside #form input[type="text"]{
+    display: block;
+    width: 80%;
+    height: 30px;
+    margin: 10px 10% 10px 10%;
+}
+
+#btn2{
+    margin: 20px 20% 20px 23%;
 }
 
 .buttons,
@@ -102,7 +141,7 @@
     border: none;
     text-transform: uppercase;
     border-radius: 5px;
-    box-shadow: 0px 1px 10px #000;
+    box-shadow: 0px 1px 5px #333;
     padding: 10px;
     background: rgb(4, 177, 85);
     font-weight: bold;
@@ -110,14 +149,24 @@
     transition: all 200ms;
 
 }
+
 .buttons:hover,
 #form .buttons:hover{
     background: rgb(4, 122, 59);
 }
 
-
-
 .footer{
     grid-column: 1/6;
-    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(220, 220, 220,0.4);
+    border-radius: 10px;
+}
+
+.parrafo p{
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 0px 1px 1px #000;
+    letter-spacing: 2px;
 }
