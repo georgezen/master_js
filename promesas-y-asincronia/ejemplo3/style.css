@@ -160,6 +160,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column wrap;
     background-color: rgba(220, 220, 220,0.4);
     border-radius: 10px;
 }
