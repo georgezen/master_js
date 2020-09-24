@@ -8,19 +8,25 @@ var res = document.querySelector(".res-api");
 save_form.addEventListener("click", () => save());
 
 var save = () => {
-  var divisor = base.value;
   var dividendo = numero.value;
+  var divisor = base.value;
   var resultin;
   var resudio = 0;
   var arra = [];
 
   res.innerHTML = "";
 
-  if (divisor <= 1 || divisor > dividendo) {
+  if (divisor <= 1 ) {
     alert("botate a la verga");
     base.value = 2;
+    
     return false;
-  } else {
+  }else if( divisor > dividendo){
+    alert("pon una base menor del numero a convertir");
+    base.value = 2;
+    return false;
+  } 
+  else {
     do {
       resultin = Math.trunc(dividendo / divisor);
       resudio = dividendo % divisor;
@@ -36,6 +42,7 @@ var save = () => {
         string_ordenado.toString().replaceAll(",", "")
     );
   }
+  
   // localStorage.setItem('numero',numero.value);
   // localStorage.setItem('base',base.value);
 };
