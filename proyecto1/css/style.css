@@ -1,0 +1,131 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background: url('../img/hojas.jpg');
+    background-attachment: fixed;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 90%;
+    display: grid;
+    min-height: 1200px;
+    margin: 0px 5% 0px 5%;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 10% 25% 52% 7% ;
+    background-color: #fff;
+}
+
+.header{
+    grid-column:1/5;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid pink;
+}
+
+.logo{
+    flex-basis: 40%;
+    flex-grow: 1;
+    
+
+}
+
+.logo .img_container{
+    width: 20%;
+    height: 80px;
+    margin-left: 40%;
+    margin-right: 40%;
+    
+    
+}
+
+.img_container img{
+    width: 100%;
+    height: inherit;
+}
+
+
+.menu{
+    flex-basis: 45%;
+    flex-grow: 1;
+}
+
+.menu ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.menu ul li{
+    font-size: 25px;
+    color: rgba(0,0,0,0.85);
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px 10px 15px 10px;
+    transition: all 250ms;
+}
+
+.menu ul li:last-child{
+    margin-right: 1%;
+}
+
+.menu ul li:hover{
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.slider{
+    grid-column: 1/5;
+    width: 74%;
+    margin: 3% 13% 3% 13%;
+    border: 1px solid pink;
+}
+
+.main{
+    grid-column: 1/5;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border: 1px solid red;
+}
+
+ .section{
+    flex-basis: 60%;
+    flex-grow: 1;
+    margin: 0px 1% 0px 1%;
+    border: 1px solid blue;
+}
+
+.post{
+    border: 1px solid lime;
+}
+
+.article h2,
+.article span{
+    display: block;
+    text-align: center;
+}
+
+.article span{
+    color: #444;
+}
+.article p{
+    font-size: 20px;
+    line-height: 25px;
+    color: #222;
+    text-align: left;
+    padding: 10px 10px 5px 10px;
+    letter-spacing: 1px;
+}
+.aside{
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin: 0px 1% 0px 1%;
+    border: 1px solid purple;
+}
+
