@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto con Jquery</title>
     <script src="js/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- Fin Slider -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link id="tema" rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="container">
@@ -26,10 +34,18 @@
             <li><a href=""></a>AMONG US</li>
             <li><a href=""></a>CONTACTO</li>
           </ul>
+          <input type="button" id="dark" value="Dark mode">
         </nav>
       </header>
 
-      <div class="slider"></div>
+      <div class="slider">
+        <div class="content-img">
+          <img src="img/cielo.jpg" title="Un cielo chingon">
+          <img src="img/caracol.jpg" title="Unos lines que no se k pedo">
+          <img src="img/rojo.jpg" title="Un rojo puteado">
+
+        </div>
+      </div>
 
       <main class="main">
         <section class="section">
@@ -45,30 +61,7 @@
               </p>
             </article>
           </div>
-          <div class="post">
-            <article class="article">
-              <h2>Te pones bien cachonda</h2>
-              <span> hija de tu puta madre</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                beatae laborum, incidunt, ratione eligendi nemo ipsam sed
-                ducimus facilis dolorum voluptatem culpa amet eum iste commodi
-                tempora, reiciendis nesciunt est.
-              </p>
-            </article>
-          </div>
-          <div class="post">
-            <article class="article">
-              <h2>Te pones bien cachonda</h2>
-              <span> hija de tu puta madre</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                beatae laborum, incidunt, ratione eligendi nemo ipsam sed
-                ducimus facilis dolorum voluptatem culpa amet eum iste commodi
-                tempora, reiciendis nesciunt est.
-              </p>
-            </article>
-          </div>
+          
         </section>
         <aside class="aside">
           <span class="span_h3"><h3>Quien soy</h3></span>

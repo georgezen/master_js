@@ -26,6 +26,7 @@ body {
   border-bottom: 1px solid #ccc;
   box-shadow: 0px 1px 10px #ccc;
   background-color: #eee;
+  
 }
 
 .logo {
@@ -81,7 +82,14 @@ body {
   grid-column: 1/5;
   width: 74%;
   margin: 3% 13% 3% 13%;
-  border: 1px solid gray;
+  
+  
+}
+
+  
+.bx-wrapper,.bx-viewport {
+ margin: 0px auto !important;
+ height: 200px !important;
 }
 
 .main {
@@ -95,6 +103,8 @@ body {
   flex-basis: 60%;
   flex-grow: 1;
   margin: 0px 1% 0px 1%;
+  overflow-y: scroll;
+  max-height: 595px;
 }
 
 .post {
@@ -142,7 +152,7 @@ body {
   width: 50%;
   height: 20%;
   margin: 0px 25% 0px 25%;
-  border: 1px solid red;
+  
 }
 
 .img_aside img {
