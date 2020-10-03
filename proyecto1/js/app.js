@@ -1,7 +1,6 @@
 "use strict";
 $(document).ready(() => {
-//   var decodificado1 = localStorage.getItem("tema");
-//   tema.href = decodificado1;
+
 
   console.log("dsdsds");
 
@@ -55,24 +54,33 @@ $(document).ready(() => {
 
   var dark = document.querySelector("#dark");
   var tema = document.querySelector("#tema");
+  var ruta_defecto = "https://www.dracosoftware-zen.com/master_js/proyecto1/css/style.css";
+  var ruta = "https://www.dracosoftware-zen.com/master_js/proyecto1/css/dark-mode.css";
 
-  $(dark).on("click", () => {
-    cargar_tema();
-  });
-
-  function cargar_tema() {
-    if (tema.href == "http://127.0.0.1:5500/proyecto1/css/style.css") {
-      dark.value = "White mode";
-      $("#tema").prop(
-        "href",
-        "http://127.0.0.1:5500/proyecto1/css/dark-mode.css"
-      );
-    } else {
-      dark.value = "Dark mode";
-      $("#tema").prop("href", "http://127.0.0.1:5500/proyecto1/css/style.css");
+  
+  dark.addEventListener('click',()=>{
+    
+    if (tema.href == ruta_defecto) {
+      tema.href = ruta;
+      localStorage.setItem('dark-mode','true');
+      dark.value = 'Modo claro';
+      console.log('entra a modo obscuro');
+    }else{
+      tema.href = ruta_defecto;
+      localStorage.setItem('dark-mode','false');
+      dark.value = 'Modo obscuro';
+      console.log('entra a modo claro');
     }
-    //  $('#tema').prop('href','css/dark-mode.css');
-    console.log(tema.href);
-    localStorage.setItem("tema", tema.href);
+
+  });
+  
+  if (localStorage.getItem('dark-mode') === 'true') {
+    tema.href = ruta;
+    dark.value = 'Modo claro';
+  } else {
+    tema.href = ruta_defecto;
+    dark.value = 'Modo obscuro';
   }
+
 });
+
