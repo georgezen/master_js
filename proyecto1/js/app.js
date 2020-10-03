@@ -54,8 +54,12 @@ $(document).ready(() => {
 
   var dark = document.querySelector("#dark");
   var tema = document.querySelector("#tema");
-  var ruta_defecto = "https://www.dracosoftware-zen.com/master_js/proyecto1/css/style.css";
-  var ruta = "https://www.dracosoftware-zen.com/master_js/proyecto1/css/dark-mode.css";
+  var ruta_defecto = "http://localhost/master_js/proyecto1/css/style.css";
+  var ruta = "http://localhost/master_js/proyecto1/css/dark-mode.css";
+
+  var ruta_defecto_produccion = "https://www.dracosoftware-zen.com/master_js/proyecto1/css/style.css";
+  var ruta_produccion = "https://www.dracosoftware-zen.com/master_js/proyecto1/css/dark-mode.css";
+
 
   
   dark.addEventListener('click',()=>{
