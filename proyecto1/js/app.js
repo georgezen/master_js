@@ -1,7 +1,5 @@
 "use strict";
 $(document).ready(() => {
-
-
   console.log("dsdsds");
 
   $(".content-img").bxSlider({
@@ -57,34 +55,58 @@ $(document).ready(() => {
   var ruta_defecto = "http://localhost/master_js/proyecto1/css/style.css";
   var ruta = "http://localhost/master_js/proyecto1/css/dark-mode.css";
 
-  var ruta_defecto_produccion = "https://www.dracosoftware-zen.com/master_js/proyecto1/css/style.css";
-  var ruta_produccion = "https://www.dracosoftware-zen.com/master_js/proyecto1/css/dark-mode.css";
+  var ruta_defecto_produccion =
+    "https://www.dracosoftware-zen.com/master_js/proyecto1/css/style.css";
+  var ruta_produccion =
+    "https://www.dracosoftware-zen.com/master_js/proyecto1/css/dark-mode.css";
 
-
-  
-  dark.addEventListener('click',()=>{
-    
+  dark.addEventListener("click", () => {
     if (tema.href == ruta_defecto) {
       tema.href = ruta;
-      localStorage.setItem('dark-mode','true');
-      dark.value = 'Modo claro';
-      console.log('entra a modo obscuro');
-    }else{
+      localStorage.setItem("dark-mode", "true");
+      dark.value = "Modo claro";
+      console.log("entra a modo obscuro");
+    } else {
       tema.href = ruta_defecto;
-      localStorage.setItem('dark-mode','false');
-      dark.value = 'Modo obscuro';
-      console.log('entra a modo claro');
+      localStorage.setItem("dark-mode", "false");
+      dark.value = "Modo obscuro";
+      console.log("entra a modo claro");
     }
-
   });
-  
-  if (localStorage.getItem('dark-mode') === 'true') {
+
+  if (localStorage.getItem("dark-mode") === "true") {
     tema.href = ruta;
-    dark.value = 'Modo claro';
+    dark.value = "Modo claro";
   } else {
     tema.href = ruta_defecto;
-    dark.value = 'Modo obscuro';
+    dark.value = "Modo obscuro";
   }
 
-});
+  var nombre = $("#nombre");
+  var apellidos = $("#apellidos");
+  var buton = $("#save");
+  var cadenado = "";
+  buton.on("click", () => {
+    almacenando();
+  });
 
+  function almacenando() {
+    var obj = {
+      nombre: nombre.val(),
+      apellidos: apellidos.val(),
+    };
+
+    console.log(obj);
+    cadenado = localStorage.setItem("formulario", JSON.stringify(obj));
+    var parseo = JSON.parse(localStorage.getItem("formulario"));
+    $(".content-quien").append(parseo.nombre + "<br>");
+    $(".content-quien").append(parseo.apellidos + "<br>");
+
+    limpiar();
+  }
+
+  function limpiar() {
+    nombre.val("");
+    apellidos.val("");
+  }
+});
