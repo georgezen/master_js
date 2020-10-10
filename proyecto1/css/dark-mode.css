@@ -1,3 +1,8 @@
+*{
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
   padding: 0px;
   margin: 0px;
@@ -57,23 +62,23 @@ body {
   justify-content: space-around;
 }
 
-.menu ul li {
+.menu ul li a{
   font-size: 25px;
-  color: #fff;
-  list-style: none;
-  text-decoration: none;
   cursor: pointer;
   padding: 15px 10px 15px 10px;
+  color: rgba(246, 246, 246, 0.85);
   transition: all 250ms;
 }
+
 
 .menu ul li:last-child {
   margin-right: 1%;
 }
 
-.menu ul li:hover {
-  background-color: rgb(11, 123, 156);
+.menu ul li a:hover {
+  background-color: #333;
   border-radius: 5px;
+  color: #fff;
 }
 
 .slider {

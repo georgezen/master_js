@@ -2,12 +2,14 @@
 $(document).ready(() => {
   console.log("dsdsds");
 
+  //slider
   $(".content-img").bxSlider({
     mode: "fade",
     captions: true,
     slideWidth: 600,
   });
 
+  //post dinamicos
   var posts = [
     {
       title: "Te pones bien cachonda",
@@ -50,8 +52,9 @@ $(document).ready(() => {
     document.querySelector(".section").innerHTML += posteado;
   });
 
-  var dark = document.querySelector("#dark");
-  var tema = document.querySelector("#tema");
+  //dark mode
+  var dark = document.querySelector(".dark");
+  var tema = document.querySelector(".tema");
   var ruta_defecto = "http://localhost/master_js/proyecto1/css/style.css";
   var ruta = "http://localhost/master_js/proyecto1/css/dark-mode.css";
 
@@ -82,31 +85,44 @@ $(document).ready(() => {
     dark.value = "Modo obscuro";
   }
 
+  //almacenamiento con local storage
   var nombre = $("#nombre");
   var apellidos = $("#apellidos");
   var buton = $("#save");
-  var cadenado = "";
+  var parseo = "";
   buton.on("click", () => {
     almacenando();
   });
 
   function almacenando() {
+    $('.user').html('');
     var obj = {
       nombre: nombre.val(),
       apellidos: apellidos.val(),
     };
 
     console.log(obj);
-    cadenado = localStorage.setItem("formulario", JSON.stringify(obj));
-    var parseo = JSON.parse(localStorage.getItem("formulario"));
-    $(".content-quien").append(parseo.nombre + "<br>");
-    $(".content-quien").append(parseo.apellidos + "<br>");
-
+    localStorage.setItem("formulario", JSON.stringify(obj));
+    parseo = JSON.parse(localStorage.getItem("formulario"));
+    $(".user").append(parseo.nombre + "<br>");
+    $(".user").append(parseo.apellidos + "<br>");
     limpiar();
+    
+    
   }
 
   function limpiar() {
     nombre.val("");
     apellidos.val("");
+   
   }
+
+  parseo = JSON.parse(localStorage.getItem("formulario"));
+
+    if (parseo != null && parseo != 'undefined' && parseo != '') {
+      $(".user").append(parseo.nombre + "<br>");
+    $(".user").append(parseo.apellidos + "<br>");
+
+      
+    }
 });
