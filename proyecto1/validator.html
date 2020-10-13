@@ -12,11 +12,11 @@
     />
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!-- Fin Slider -->
-    <script src="js/moment.min.js"></script>
-    <script src="js/moment-with-locales.js"></script>
-    <!-- moment js (reloj) -->
+    <!-- validator  -->
 
-    <!-- fin moment js (reloj) -->
+    <script src="js/jquery.form-validator.min.js"></script>
+    <!-- Fin validator -->
+
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <link class="tema" rel="stylesheet" href="css/style.css" />
   </head>
@@ -34,30 +34,38 @@
         </div>
         <nav class="menu">
           <ul>
-            
+            <li><a href="reloj.html">RELOJ</a></li>
+
             <li><a href="index.html">INICIO</a></li>
-            
-            <li><a href="validator.html">CONTACTO</a></li>
           </ul>
-          <input type="button" class="dark" value="Dark mode">
+          <input type="button" class="dark" value="Dark mode" />
         </nav>
       </header>
 
       <div class="slider">
-        <div class="content-img">
-          <img src="img/cielo.jpg" title="Un cielo chingon">
-          <img src="img/caracol.jpg" title="Unos lines que no se k pedo">
-          <img src="img/rojo.jpg" title="Un rojo puteado">
+        <div class="form-validator">
+            <div class="name-error">
 
+            </div>
+          <form action="" id="form-j">
+            <label for="" class="label-js">Nombre</label>
+            <input type="text" name="name" id="nombre-js" class="text-js" />
+           
+            <label for="" class="label-js">Apellidos</label>
+            <input
+              type="text"
+              name="last-name"
+              id="apellido-js"
+              class="text-js"
+            />
+         
+
+            <input type="button" value="Validar" class="guardar-js" />
+          </form>
         </div>
       </div>
 
-      <main class="main">
-        <div class="reloj">
-            
-        </div>
-       
-      </main>
+      <main class="main"></main>
 
       <footer class="footer">
         <div class="copy">
@@ -66,6 +74,6 @@
       </footer>
     </div>
 
-    <script src="js/app2.js"></script>
+    <script src="js/app3.js"></script>
   </body>
 </html>

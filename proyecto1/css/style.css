@@ -84,6 +84,7 @@ body {
   grid-column: 1/5;
   width: 74%;
   margin: 3% 13% 3% 13%;
+  
 }
 
 .bx-wrapper,
@@ -221,4 +222,61 @@ body {
   font-size: 35px;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.form-validator{
+  width: 24%;
+  margin: 10px 38% 10px 38%;
+  
+}
+
+#form-j{
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+
+#form-j input[type="text"],
+#form-j input[type="button"],
+#form-j label{
+  margin: 10px 0px 10px 0px;
+}
+
+.label-js{
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.85);
+  letter-spacing: 1px;
+}
+
+
+.text-js{
+  width: 80%;
+  height: 25px;
+  font-size: 23px;
+  color: #000;
+  border-radius: 5px;
+}
+
+.text-js:focus{
+  background-color: rgba(255, 43, 43, 0.3);
+}
+
+.guardar-js{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(14, 168, 0);
+  box-shadow: 0px 1px 2px #ccc;
+  font-weight: bold;
+  transition: all 250ms;
+}
+
+.guardar-js:hover{
+  background-color: rgb(4, 105, 4);
+  color: #ccc;
+
 }
