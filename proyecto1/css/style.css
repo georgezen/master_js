@@ -61,14 +61,13 @@ body {
   justify-content: space-around;
 }
 
-.menu ul li a{
+.menu ul li a {
   font-size: 25px;
   cursor: pointer;
   padding: 15px 10px 15px 10px;
   color: rgba(0, 0, 0, 0.85);
   transition: all 250ms;
 }
-
 
 .menu ul li:last-child {
   margin-right: 1%;
@@ -84,7 +83,6 @@ body {
   grid-column: 1/5;
   width: 74%;
   margin: 3% 13% 3% 13%;
-  
 }
 
 .bx-wrapper,
@@ -224,33 +222,30 @@ body {
   letter-spacing: 1px;
 }
 
-.form-validator{
+.form-validator {
   width: 24%;
   margin: 10px 38% 10px 38%;
-  
 }
 
-#form-j{
+#form-j {
   border: 1px solid #ccc;
   text-align: center;
   padding: 10px;
 }
 
-
 #form-j input[type="text"],
 #form-j input[type="button"],
-#form-j label{
+#form-j label {
   margin: 10px 0px 10px 0px;
 }
 
-.label-js{
+.label-js {
   font-size: 26px;
   color: rgba(0, 0, 0, 0.85);
   letter-spacing: 1px;
 }
 
-
-.text-js{
+.text-js {
   width: 80%;
   height: 25px;
   font-size: 23px;
@@ -258,11 +253,11 @@ body {
   border-radius: 5px;
 }
 
-.text-js:focus{
+.text-js:focus {
   background-color: rgba(255, 43, 43, 0.3);
 }
 
-.guardar-js{
+.guardar-js {
   text-transform: uppercase;
   color: #fff;
   font-size: 30px;
@@ -275,8 +270,118 @@ body {
   transition: all 250ms;
 }
 
-.guardar-js:hover{
+.guardar-js:hover {
   background-color: rgb(4, 105, 4);
   color: #ccc;
+}
 
+/* medias querys */
+
+@media (max-width: 1024px) {
+  .header {
+    box-shadow: 0px 1px 1px #ccc;
+  }
+  .logo .img_container {
+    width: 28%;
+    margin-left: 36%;
+    margin-right: 36%;
+  }
+
+  .menu ul li a {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    flex-basis: 25%;
+  }
+
+  .logo .img_container {
+    width: 38%;
+    margin-left: 31%;
+    margin-right: 31%;
+  }
+
+  .img_container img {
+    border-radius: 8px;
+  }
+
+  .menu ul li a {
+    font-size: 30px;
+  }
+
+  .dark {
+    margin-left: 5%;
+  }
+
+  .section {
+    flex-basis: 45%;
+  }
+
+  .aside .cont_form {
+    width: 70%;
+    margin: 10% 15% 20px 15%;
+  }
+
+  .form label,
+  .form input[type="text"],
+  .form input[type="button"] {
+    font-size: 25px;
+  }
+
+  #save {
+    letter-spacing: 0px;
+    padding: 2px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .copy span {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0px;
+  }
+}
+
+@media (max-width: 667px) {
+  #save {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .container {
+    grid-template-rows: 10% 17% 64% 9%;
+  }
+  .main {
+    flex-flow: column wrap;
+  }
+
+  .copy {
+    width: 80%;
+    margin: 0px 10% 0px 10%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    grid-template-rows: 12% 17% 61% 10%;
+  }
+  .logo .img_container {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .main {
+    flex-flow: column wrap;
+  }
+
+  .copy {
+    width: 80%;
+    margin: 0px 10% 0px 10%;
+    text-align: center;
+  }
 }

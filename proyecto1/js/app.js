@@ -15,22 +15,21 @@ $(document).ready(() => {
       title: "Te pones bien cachonda",
       subtitle: "hija de tu puta madre",
       contenido:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde" +
-        "dsdasdadsdasdasdasdasdasdasdasdasdasdassdsssssssssssssssssssssss",
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde" 
     },
     {
       title: "Te pones bien cachonda",
       subtitle: "hija de tu puta madre",
       contenido:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde" +
-        "dsdasdadsdasdasdasdasdasdasdasdasdasdassdsssssssssssssssssssssss",
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde" 
+        
     },
     {
       title: "Te pones bien cachonda",
       subtitle: "hija de tu puta madre",
       contenido:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde" +
-        "dsdasdadsdasdasdasdasdasdasdasdasdasdassdsssssssssssssssssssssss",
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde" 
+        
     },
   ];
 
