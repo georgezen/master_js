@@ -1,0 +1,15 @@
+.oculto{
+    display: block;
+}
+
+.cont_column{
+    display: none;
+}
+
+.show_hidden{
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(0, 94, 182);
+    display: flex;
+    justify-content: center;
+}
