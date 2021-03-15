@@ -5,7 +5,7 @@ var tablin = $("#table").DataTable({
     "columns": [
         null,
         null,
-        null,
+        null,   
         { "visible": false },
         null
       ]
@@ -107,11 +107,10 @@ function update_row() {
 }
 
 function save_alli() {
-    var tableData = tablin.select();
+    var tableData = tablin.rows().data().toArray();
    save_to_object(tableData);
-   
 
-    console.log(tableData);
+   console.log(tableData);
     
 
 }
