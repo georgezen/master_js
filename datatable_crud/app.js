@@ -1,12 +1,20 @@
 var tablin = $("#table").DataTable({
-    language: {
+    'language': {
         url: "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json",
     },
+    "columns": [
+        null,
+        null,
+        null,
+        { "visible": false },
+        null
+      ]
 });
 
 $(document).ready(function () {
     var nombre = document.querySelector("#nombre");
     var apellidos = document.querySelector("#apellidos");
+    var paises = document.querySelector("#paises");
     var savin = document.querySelector("#save");
     var update = document.querySelector("#update");
     var lista = document.querySelector("#lista");
@@ -47,6 +55,7 @@ function add_fila(opt) {
             nombre.value,
             apellidos.value,
             lista.value,
+            paises.value,
             '<span class="editarcio" style="cursor:pointer;">Editar</span>' +
                 '<span class="eliminarcio" style="cursor:pointer;">Eliminar</span>',
         ])
@@ -70,6 +79,9 @@ $("#table tbody").on("click", ".eliminarcio", function () {
     tablin.row($(this).parents("tr")).remove().draw();
 });
 
+
+//Funcion para ocultar/mostrar columnas, la columna de pais esta oculta por defecto
+// en la definicion de columns del datatable
 $("a.show_hidden").on("click", function (e) {
     e.preventDefault();
 
