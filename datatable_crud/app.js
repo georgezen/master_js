@@ -107,18 +107,34 @@ function update_row() {
 }
 
 function save_alli() {
-    var tableData = tablin.rows().data().toArray();
-   save_to_object(tableData);
+  //  var tableData = tablin.rows().data();
+    var arra = [];
+    var obj = {};
 
-   console.log(tableData);
-    
+   //save_to_object(tableData);
+
+  tablin.rows().every(function(){
+    console.log(this.data()[0]);
+
+    obj = {
+        'prop1':{
+            'subprop1':this.data()[0]
+        },
+        'prop2':this.data()[1]
+    }
+
+    arra.push(obj);
+});
+console.log(arra);
+   
+    save_to_object(arra);
 
 }
 
-function save_to_object(tableData) {
+function save_to_object(arra) {
     var obj_save = {
         'observa': 'hola pinche putita',
-        'la_matriz': tableData
+        'la_matriz': arra
     }
     console.log(obj_save);
 }
