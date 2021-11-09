@@ -1,4 +1,6 @@
 import {heroes,render} from './heroes.js';
+import {promesa2} from './promesa2.js';
+console.log(); 
 
 const show = document.querySelector('#show');
 const result = document.querySelector('.result');
@@ -16,11 +18,14 @@ clear.addEventListener('click', () => {
 
 const pintandoRender = async () => {
     let ul = await render(heroes);
-    
+    const num = await promesa2(1);
    result.appendChild(ul);
 
     result.innerHTML += '<br>';
-    result.innerHTML += 'hola'; 
- 
+    result.innerHTML +=  num; 
+   
 }
+
+
+
 
