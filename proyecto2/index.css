@@ -1,0 +1,133 @@
+body{
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    height: 800px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 10% 70% 20%;
+}
+
+.header{
+    grid-column: 1/4;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    background-color: #ddd;
+}
+
+.header .logo{
+    width: 45%;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo .img{
+    width: 30%;
+    
+    border: 1px solid rgb(220, 220, 252);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logo .img p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .nav{
+    width: 45%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    
+}
+
+.nav ul{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav ul li{
+    width: 27%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    padding: 3px;
+    
+}
+
+.nav ul li:hover{
+    background-color: rgb(0, 124, 196);
+    cursor: pointer;
+    border-radius: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #fff;
+    transition: all 350ms;
+}
+
+.section{
+    grid-column: 1/4;
+    
+}
+
+.section .container-form{
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 3%;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 2%;
+
+}
+
+.label{
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 1.7em;
+    text-align: center;
+
+}
+
+.form-control{
+    width: 80%;
+    height: 35px;
+    margin: 3% 10% 3% 10%;
+    border-radius: 4px;
+    font-size: 30px;
+    border: none;
+}
+
+.footer{
+    grid-column: 1/4;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy span {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #fff;
+  }
