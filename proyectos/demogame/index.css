@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('./img/bg2x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:70% 30%;
+  gap: 3px;
+  height: 100vh;
+}
+
+.titulos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#limpiar {
+  padding: 10px 20px;
+  background-color: #f44336; /* Rojo */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#limpiar:hover {
+  background-color: #790800; /* Rojo oscuro */
+}
+
+.nidos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 100%;
+  
+}
+
+#nido1{
+  background-image: url('./img/nidos/cinco.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+#nido2{
+  background-image: url('./img/nidos/dos.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+#nido3{
+  background-image: url('./img/nidos/seis.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+#nido4{
+  background-image: url('./img/nidos/cuatro.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.nido {
+  display: flex;
+  flex-flow:row wrap;
+  align-items: center; 
+  justify-content: flex-start; 
+  width: 20%;
+  height: 40%;
+  position: relative;
+  padding: 20px; 
+}
+
+.nido:nth-child(odd) {
+  align-self: flex-end;
+}
+
+.nido:nth-child(even) {
+  align-self: flex-start; 
+  margin-top: 5%;
+}
+
+.huevo {
+  width: 35%;
+  height: auto;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.nido .huevo {
+  width: 25%; 
+  height: 35%;
+  margin: 0 -10% 0 0;
+}
+
+#container-eggs {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow:row wrap;
+}
+
+.tipo-huevo {
+  width: 10%;
+}
