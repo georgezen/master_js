@@ -22,3 +22,88 @@ th, td {
 th {
     background-color: #ddd;
 }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#user-form{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+ width: 30%;
+ height: 100%;
+ border: 1px solid #000;
+}
+
+#user-form input{
+    height: 30px;
+    margin: 0.5em;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #aaa;
+}
+
+#user-form input:focus{
+    border: 3px solid red;
+}
+
+.btn{
+    background-color: #01ab07;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background-color: #036006; 
+}

@@ -1,5 +1,8 @@
 let users = JSON.parse(localStorage.getItem('users')) || [];
 let editingIndex = -1;
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("myBtn");
+const span = document.getElementsByClassName("close")[0];
 
 document.getElementById('user-form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -25,6 +28,7 @@ document.getElementById('user-form').addEventListener('submit', function(e) {
 });
 
 document.getElementById('save').addEventListener('click', function() {
+    console.log('enviar a servidor');
     fetch('https://tu-servicio-rest.com/api/users', {
         method: 'POST',
         headers: {
@@ -67,3 +71,17 @@ function deleteUser(index) {
 }
 
 users.forEach(addRow);
+
+btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
