@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Código QR con JavaScript</title>
+      <link rel="stylesheet" href="style.css">
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+      <script defer src="index.js"></script>
+</head>
+<body>
+   <div class="contenedor">
+    <form action="" id="formulario" class="formulario">
+        <input type="text" id="link" placeholder="Escribe texto, URL, número de teléfono..." />
+        
+        <div class="color-controls">
+            <div class="color-group">
+                <label for="colorQR">Color del QR:</label>
+                <input type="color" id="colorQR" value="#2c3e50">
+                <span class="color-name">Azul oscuro</span>
+            </div>
+            <div class="color-group">
+                <label for="colorFondo">Fondo del QR:</label>
+                <input type="color" id="colorFondo" value="#ffffff">
+                <span class="color-name">Blanco</span>
+            </div>
+            <div class="color-group">
+                <label for="colorMargen">Fondo de imagen:</label>
+                <input type="color" id="colorMargen" value="#ffffff">
+                <span class="color-name">Blanco</span>
+            </div>
+        </div>
+        
+        <button class="btn">Generar Código QR</button>
+    </form>
+
+    <div id="contenedorQR" class="contenedorQR">
+        <button id="btnDescargar" class="btn btn-download hidden">Descargar QR</button>
+    </div>
+</div>
+</body>
+</html>
